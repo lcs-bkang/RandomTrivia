@@ -8,11 +8,11 @@
 import Foundation
 
 protocol TriviaService {
-    func getTrivia() async throws -> Trivia
+    func fetchTrivia() async throws -> Trivia
 }
 
 final class TriviaServiceImpl: TriviaService {
-    func getTrivia() async throws -> Trivia {
+    func fetchTrivia() async throws -> Trivia {
         let urlSession = URLSession.shared
         let url = URL(string: APIConstants.baseURL.appending("ADD EXTRA STUFF"))
         let (data, _) = try await urlSession.data(from: url!)
