@@ -11,6 +11,14 @@
 		A65349A0270F2B5A000D58B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A653499F270F2B5A000D58B5 /* ContentView.swift */; };
 		A65349A2270F2B5E000D58B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65349A1270F2B5E000D58B5 /* Assets.xcassets */; };
 		A65349A5270F2B5E000D58B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A65349A4270F2B5E000D58B5 /* Preview Assets.xcassets */; };
+		A65349B7270F2D02000D58B5 /* LoadingView .swift in Sources */ = {isa = PBXBuildFile; fileRef = A65349B6270F2D02000D58B5 /* LoadingView .swift */; };
+		A65349BA270F2D37000D58B5 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65349B9270F2D37000D58B5 /* APIConstants.swift */; };
+		A65349BD270F2D96000D58B5 /* TriviaViewModel .swift in Sources */ = {isa = PBXBuildFile; fileRef = A65349BC270F2D96000D58B5 /* TriviaViewModel .swift */; };
+		A65349C0270F2DBC000D58B5 /* TriviaSerivce.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65349BF270F2DBC000D58B5 /* TriviaSerivce.swift */; };
+		A65349C3270F2E06000D58B5 /* TriviaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65349C2270F2E06000D58B5 /* TriviaView.swift */; };
+		A65349C9270F2EAF000D58B5 /* Trivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65349C8270F2EAF000D58B5 /* Trivia.swift */; };
+		A65349CB270F2EDA000D58B5 /* TriviaScreen .swift in Sources */ = {isa = PBXBuildFile; fileRef = A65349CA270F2EDA000D58B5 /* TriviaScreen .swift */; };
+		A65349CE270F30E2000D58B5 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65349CD270F30E2000D58B5 /* APIConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +27,14 @@
 		A653499F270F2B5A000D58B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A65349A1270F2B5E000D58B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A65349A4270F2B5E000D58B5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A65349B6270F2D02000D58B5 /* LoadingView .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoadingView .swift"; sourceTree = "<group>"; };
+		A65349B9270F2D37000D58B5 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
+		A65349BC270F2D96000D58B5 /* TriviaViewModel .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TriviaViewModel .swift"; sourceTree = "<group>"; };
+		A65349BF270F2DBC000D58B5 /* TriviaSerivce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaSerivce.swift; sourceTree = "<group>"; };
+		A65349C2270F2E06000D58B5 /* TriviaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaView.swift; sourceTree = "<group>"; };
+		A65349C8270F2EAF000D58B5 /* Trivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trivia.swift; sourceTree = "<group>"; };
+		A65349CA270F2EDA000D58B5 /* TriviaScreen .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TriviaScreen .swift"; sourceTree = "<group>"; };
+		A65349CD270F30E2000D58B5 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +67,9 @@
 		A653499C270F2B5A000D58B5 /* RandomTrivia */ = {
 			isa = PBXGroup;
 			children = (
+				A65349AF270F2C0A000D58B5 /* Constants */,
+				A65349AB270F2B84000D58B5 /* Base */,
+				A65349AC270F2B8A000D58B5 /* Feature */,
 				A653499D270F2B5A000D58B5 /* RandomTriviaApp.swift */,
 				A653499F270F2B5A000D58B5 /* ContentView.swift */,
 				A65349A1270F2B5E000D58B5 /* Assets.xcassets */,
@@ -65,6 +84,107 @@
 				A65349A4270F2B5E000D58B5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A65349AB270F2B84000D58B5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A65349B8270F2D13000D58B5 /* Constants */,
+				A65349AD270F2BF1000D58B5 /* Views */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A65349AC270F2B8A000D58B5 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				A65349CC270F30C2000D58B5 /* Trivia */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		A65349AD270F2BF1000D58B5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A65349B0270F2C89000D58B5 /* Loading */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A65349AF270F2C0A000D58B5 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A65349CD270F30E2000D58B5 /* APIConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		A65349B0270F2C89000D58B5 /* Loading */ = {
+			isa = PBXGroup;
+			children = (
+				A65349B6270F2D02000D58B5 /* LoadingView .swift */,
+			);
+			path = Loading;
+			sourceTree = "<group>";
+		};
+		A65349B8270F2D13000D58B5 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A65349B9270F2D37000D58B5 /* APIConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		A65349BB270F2D56000D58B5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A65349BC270F2D96000D58B5 /* TriviaViewModel .swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A65349BE270F2D9B000D58B5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				A65349BF270F2DBC000D58B5 /* TriviaSerivce.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		A65349C1270F2DDB000D58B5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A65349C2270F2E06000D58B5 /* TriviaView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A65349C6270F2E7B000D58B5 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				A65349CA270F2EDA000D58B5 /* TriviaScreen .swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		A65349C7270F2E92000D58B5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A65349C8270F2EAF000D58B5 /* Trivia.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A65349CC270F30C2000D58B5 /* Trivia */ = {
+			isa = PBXGroup;
+			children = (
+				A65349BB270F2D56000D58B5 /* ViewModel */,
+				A65349BE270F2D9B000D58B5 /* Service */,
+				A65349C1270F2DDB000D58B5 /* Views */,
+				A65349C6270F2E7B000D58B5 /* Screens */,
+				A65349C7270F2E92000D58B5 /* Model */,
+			);
+			path = Trivia;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +257,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A65349C0270F2DBC000D58B5 /* TriviaSerivce.swift in Sources */,
+				A65349CB270F2EDA000D58B5 /* TriviaScreen .swift in Sources */,
+				A65349C9270F2EAF000D58B5 /* Trivia.swift in Sources */,
+				A65349BA270F2D37000D58B5 /* APIConstants.swift in Sources */,
 				A65349A0270F2B5A000D58B5 /* ContentView.swift in Sources */,
+				A65349C3270F2E06000D58B5 /* TriviaView.swift in Sources */,
+				A65349CE270F30E2000D58B5 /* APIConstants.swift in Sources */,
 				A653499E270F2B5A000D58B5 /* RandomTriviaApp.swift in Sources */,
+				A65349B7270F2D02000D58B5 /* LoadingView .swift in Sources */,
+				A65349BD270F2D96000D58B5 /* TriviaViewModel .swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
