@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct Trivia: Codable {
+    
+    let response_code: Int
+    let results: [Result]
+}
