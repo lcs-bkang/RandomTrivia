@@ -11,7 +11,10 @@ import SwiftUI
 struct RandomTriviaApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            
+            NavigationView {
+                TriviaScreen()
+            }
         }
     }
 }

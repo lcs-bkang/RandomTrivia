@@ -8,16 +8,19 @@
 import SwiftUI
 
 struct LoadingView: View {
+    
+    let text: String
+    
     var body: some View {
         VStack(spacing: 8) {
             ProgressView()
-            Text("Fetching Trivia Questions")
+            Text(text)
         }
     }
 }
 
-struct LoadingView__Previews: PreviewProvider {
+struct LoadingView_Previews: PreviewProvider {
     static var previews: some View {
-        LoadingView()
+        LoadingView(text: "Fetching Trivia Questions")
     }
 }
