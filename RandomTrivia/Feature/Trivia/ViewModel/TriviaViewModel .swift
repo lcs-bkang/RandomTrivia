@@ -8,29 +8,22 @@
 import Foundation
 
 protocol TriviaViewModel: ObservableObject {
-    func getTrivia() async throws -> Trivia
+    func getTrivia() async
 }
 
 final class TriviaViewModelImpl: TriviaViewModel {
-    func getTrivia() async throws -> Trivia {
-        
-    }
     
-    
-    @Published private(set) var results: [Trivia] = []
-    
-    @Published private(set) var result: Trivia
+    @Published private(set) var results: Trivia = Trivia(response_code: 0, results: [Result(category: "", type: "", difficulty: "", question: "", correct_answer: "", incorrect_answers: [""])])
     
     private let service: TriviaService
     
     init(service: TriviaService) {
         self.service = service
-        
     }
     
     func getTrivia() async {
         do {
-            self.result = try await service.fetchTrivia()
+            self.results = try await service.fetchTrivia()
             dump(results)
         } catch {
             print("Error \(error)")
