@@ -11,6 +11,7 @@ protocol TriviaViewModel: ObservableObject {
     func getTrivia() async
 }
 
+@MainActor
 final class TriviaViewModelImpl: TriviaViewModel {
     
     @Published private(set) var results: Trivia = Trivia(response_code: 0, results: [Result(category: "", type: "", difficulty: "", question: "", correct_answer: "", incorrect_answers: [""])])
