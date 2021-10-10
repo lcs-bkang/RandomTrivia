@@ -14,13 +14,22 @@ struct TriviaScreen: View {
     var body: some View {
         
         VStack {
-//            Text(Trivia.dummyData(Trivia(results[0].question)))
+            Text(Trivia.dummyData.results[0].question)
             Text("Trivia")
         }
         .task {
             await vm.getTrivia()
         }
-        .navigationTitle("Trivia")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .principal)
+            {
+                Text("Trivia")
+                    .font(.largeTitle.bold())
+                
+                    .accessibilityAddTraits(.isHeader)
+            }
+        }
     }
 }
 
