@@ -14,7 +14,18 @@ struct TriviaScreen: View {
     var body: some View {
         
         VStack {
+            Text(Trivia.dummyData.results[0].category)
+                .font(.title2)
+                .padding(3)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 10)
+                        .stroke(Color.blue, lineWidth: 4))
             Text(Trivia.dummyData.results[0].question)
+                .font(.largeTitle)
+                .padding(3)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 16)
+                        .stroke(Color.blue, lineWidth: 4))
             Text("Trivia")
         }
         .task {
