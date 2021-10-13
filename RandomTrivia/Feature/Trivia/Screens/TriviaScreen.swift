@@ -18,34 +18,47 @@ struct TriviaScreen: View {
             
             Spacer()
             
-            Button(Trivia.dummyData.results[0].correct_answer) {
+            ZStack {
                 
-            }
-            .padding(3)
-            .overlay(
-            RoundedRectangle(cornerRadius: 16)
-                .stroke(Color.blue, lineWidth: 3))
-            Button(Trivia.dummyData.results[0].incorrect_answers[0]) {
+                RoundedRectangle(cornerRadius: 20, style: .continuous)
+                .fill(Color.purple)
+                .frame(width: 380, height: 120, alignment: .center)
                 
+                Button(action: {
+                    
+                }, label: { Text(Trivia.dummyData.results[0].correct_answer)
+                        .font(.title2)
+                        .bold()
+                        .padding()
+                        .foregroundColor(.black)
+                })
             }
-            .padding(3)
-            .overlay(
-            RoundedRectangle(cornerRadius: 16)
-                .stroke(Color.blue, lineWidth: 3))
+            Button(action: {
+                
+            }, label: { Text(Trivia.dummyData.results[0].incorrect_answers[0])
+                    .font(.title2)
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 10)
+                                    .stroke(Color.blue, lineWidth: 2)
+                                    .background(Color.blue.cornerRadius(10))
+                    )
+                    .foregroundColor(.black)
+            })
+            
             Button(Trivia.dummyData.results[0].incorrect_answers[1]) {
                 
             }
             .padding(3)
             .overlay(
-            RoundedRectangle(cornerRadius: 16)
-                .stroke(Color.blue, lineWidth: 3))
+                RoundedRectangle(cornerRadius: 16)
+                    .stroke(Color.blue, lineWidth: 3))
             Button(Trivia.dummyData.results[0].incorrect_answers[2]) {
                 
             }
             .padding(3)
             .overlay(
-            RoundedRectangle(cornerRadius: 16)
-                .stroke(Color.blue, lineWidth: 3))
+                RoundedRectangle(cornerRadius: 16)
+                    .stroke(Color.blue, lineWidth: 3))
         }
         .task {
             await vm.getTrivia()
