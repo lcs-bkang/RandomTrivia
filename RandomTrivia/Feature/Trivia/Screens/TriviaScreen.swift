@@ -20,9 +20,9 @@ struct TriviaScreen: View {
             
             ZStack {
                 
-                RoundedRectangle(cornerRadius: 20, style: .continuous)
-                .fill(Color.purple)
-                .frame(width: 380, height: 120, alignment: .center)
+//                RoundedRectangle(cornerRadius: 20, style: .continuous)
+//                .fill(Color.purple)
+//                .frame(width: 380, height: 120, alignment: .center)
                 
                 Button(action: {
                     
@@ -31,8 +31,13 @@ struct TriviaScreen: View {
                         .bold()
                         .padding()
                         .foregroundColor(.black)
+                        .background(
+                            RoundedRectangle(cornerRadius: 20, style: .continuous)
+                            .fill(Color.purple)
+                            .frame(width: 380, height: 120, alignment: .center))
                 })
             }
+            Spacer()
             Button(action: {
                 
             }, label: { Text(Trivia.dummyData.results[0].incorrect_answers[0])
