@@ -25,10 +25,24 @@ struct TriviaView: View {
                     RoundedRectangle(cornerRadius: 16)
                         .stroke(Color.blue, lineWidth: 6))
             HStack {
-                Spacer()
-                Text("Difficulty: \(Trivia.dummyData.results[0].difficulty)")
                 
-                Text("Type: \(Trivia.dummyData.results[0].type)")
+                Spacer()
+                VStack {
+                    Text("Difficulty:")
+                        .font(.title3)
+                    Text(Trivia.dummyData.results[0].difficulty)
+                        .font(.title2)
+                        .bold()
+                }
+                Spacer()
+                
+                VStack {
+                    Text("Type:")
+                        .font(.title3)
+                    Text (Trivia.dummyData.results[0].type)
+                        .font(.title2)
+                        .bold()
+                }
                 Spacer()
             }
             .font(.headline)

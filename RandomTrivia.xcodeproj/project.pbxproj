@@ -19,6 +19,7 @@
 		A65349C9270F2EAF000D58B5 /* Trivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65349C8270F2EAF000D58B5 /* Trivia.swift */; };
 		A65349CB270F2EDA000D58B5 /* TriviaScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65349CA270F2EDA000D58B5 /* TriviaScreen.swift */; };
 		A65349D0270F31E2000D58B5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65349CF270F31E2000D58B5 /* Result.swift */; };
+		A6C9431A271860740054FFF3 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C94319271860740054FFF3 /* ButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		A65349C8270F2EAF000D58B5 /* Trivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trivia.swift; sourceTree = "<group>"; };
 		A65349CA270F2EDA000D58B5 /* TriviaScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaScreen.swift; sourceTree = "<group>"; };
 		A65349CF270F31E2000D58B5 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		A6C94319271860740054FFF3 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				A65349C2270F2E06000D58B5 /* TriviaView.swift */,
+				A6C94319271860740054FFF3 /* ButtonView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				A65349BA270F2D37000D58B5 /* APIConstants.swift in Sources */,
 				A65349A0270F2B5A000D58B5 /* ContentView.swift in Sources */,
 				A65349C3270F2E06000D58B5 /* TriviaView.swift in Sources */,
+				A6C9431A271860740054FFF3 /* ButtonView.swift in Sources */,
 				A65349D0270F31E2000D58B5 /* Result.swift in Sources */,
 				A653499E270F2B5A000D58B5 /* RandomTriviaApp.swift in Sources */,
 				A65349B7270F2D02000D58B5 /* LoadingView.swift in Sources */,
