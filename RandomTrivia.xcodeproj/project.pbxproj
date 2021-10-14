@@ -19,7 +19,8 @@
 		A65349C9270F2EAF000D58B5 /* Trivia.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65349C8270F2EAF000D58B5 /* Trivia.swift */; };
 		A65349CB270F2EDA000D58B5 /* TriviaScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65349CA270F2EDA000D58B5 /* TriviaScreen.swift */; };
 		A65349D0270F31E2000D58B5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65349CF270F31E2000D58B5 /* Result.swift */; };
-		A6C9431A271860740054FFF3 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C94319271860740054FFF3 /* ButtonView.swift */; };
+		A6A488BD2718E2C2006BE617 /* TrueFalseButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A488BC2718E2C2006BE617 /* TrueFalseButtonView.swift */; };
+		A6C9431A271860740054FFF3 /* MultipleChoiceButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C94319271860740054FFF3 /* MultipleChoiceButtonView.swift */; };
 		A6C9431C271869840054FFF3 /* AnswerButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C9431B271869840054FFF3 /* AnswerButtons.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +38,8 @@
 		A65349C8270F2EAF000D58B5 /* Trivia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trivia.swift; sourceTree = "<group>"; };
 		A65349CA270F2EDA000D58B5 /* TriviaScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaScreen.swift; sourceTree = "<group>"; };
 		A65349CF270F31E2000D58B5 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		A6C94319271860740054FFF3 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		A6A488BC2718E2C2006BE617 /* TrueFalseButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrueFalseButtonView.swift; sourceTree = "<group>"; };
+		A6C94319271860740054FFF3 /* MultipleChoiceButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleChoiceButtonView.swift; sourceTree = "<group>"; };
 		A6C9431B271869840054FFF3 /* AnswerButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButtons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,8 +151,9 @@
 		A65349C1270F2DDB000D58B5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A6A488BB2718E298006BE617 /* TrueOrFalse */,
+				A6A488BA2718E271006BE617 /* MultipleChoice */,
 				A65349C2270F2E06000D58B5 /* TriviaView.swift */,
-				A6C94319271860740054FFF3 /* ButtonView.swift */,
 				A6C9431B271869840054FFF3 /* AnswerButtons.swift */,
 			);
 			path = Views;
@@ -183,6 +186,22 @@
 				A65349C7270F2E92000D58B5 /* Model */,
 			);
 			path = Trivia;
+			sourceTree = "<group>";
+		};
+		A6A488BA2718E271006BE617 /* MultipleChoice */ = {
+			isa = PBXGroup;
+			children = (
+				A6C94319271860740054FFF3 /* MultipleChoiceButtonView.swift */,
+			);
+			path = MultipleChoice;
+			sourceTree = "<group>";
+		};
+		A6A488BB2718E298006BE617 /* TrueOrFalse */ = {
+			isa = PBXGroup;
+			children = (
+				A6A488BC2718E2C2006BE617 /* TrueFalseButtonView.swift */,
+			);
+			path = TrueOrFalse;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6A488BD2718E2C2006BE617 /* TrueFalseButtonView.swift in Sources */,
 				A65349C0270F2DBC000D58B5 /* TriviaService.swift in Sources */,
 				A6C9431C271869840054FFF3 /* AnswerButtons.swift in Sources */,
 				A65349CB270F2EDA000D58B5 /* TriviaScreen.swift in Sources */,
@@ -262,7 +282,7 @@
 				A65349BA270F2D37000D58B5 /* APIConstants.swift in Sources */,
 				A65349A0270F2B5A000D58B5 /* ContentView.swift in Sources */,
 				A65349C3270F2E06000D58B5 /* TriviaView.swift in Sources */,
-				A6C9431A271860740054FFF3 /* ButtonView.swift in Sources */,
+				A6C9431A271860740054FFF3 /* MultipleChoiceButtonView.swift in Sources */,
 				A65349D0270F31E2000D58B5 /* Result.swift in Sources */,
 				A653499E270F2B5A000D58B5 /* RandomTriviaApp.swift in Sources */,
 				A65349B7270F2D02000D58B5 /* LoadingView.swift in Sources */,

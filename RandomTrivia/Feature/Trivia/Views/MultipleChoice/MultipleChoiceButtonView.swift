@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ButtonView: View {
+struct MultipleChoiceButtonView: View {
     
     @ObservedObject var vm = TriviaViewModelImpl(service: TriviaServiceImpl())
     
@@ -30,7 +30,7 @@ struct ButtonView: View {
 }
 
 
-struct ButtonView_Previews: PreviewProvider {
+struct MultipleChoiceButtonView_Previews: PreviewProvider {
     static var previews: some View {
         ButtonView(possibleAnswers: ["Cristiano Ronaldo", "Lionel Messi", "Ariana Grande", "LeBron James"])
     }
