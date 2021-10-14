@@ -20,6 +20,7 @@
 		A65349CB270F2EDA000D58B5 /* TriviaScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65349CA270F2EDA000D58B5 /* TriviaScreen.swift */; };
 		A65349D0270F31E2000D58B5 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = A65349CF270F31E2000D58B5 /* Result.swift */; };
 		A6C9431A271860740054FFF3 /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C94319271860740054FFF3 /* ButtonView.swift */; };
+		A6C9431C271869840054FFF3 /* AnswerButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6C9431B271869840054FFF3 /* AnswerButtons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		A65349CA270F2EDA000D58B5 /* TriviaScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriviaScreen.swift; sourceTree = "<group>"; };
 		A65349CF270F31E2000D58B5 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		A6C94319271860740054FFF3 /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
+		A6C9431B271869840054FFF3 /* AnswerButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButtons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			children = (
 				A65349C2270F2E06000D58B5 /* TriviaView.swift */,
 				A6C94319271860740054FFF3 /* ButtonView.swift */,
+				A6C9431B271869840054FFF3 /* AnswerButtons.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -253,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A65349C0270F2DBC000D58B5 /* TriviaService.swift in Sources */,
+				A6C9431C271869840054FFF3 /* AnswerButtons.swift in Sources */,
 				A65349CB270F2EDA000D58B5 /* TriviaScreen.swift in Sources */,
 				A65349C9270F2EAF000D58B5 /* Trivia.swift in Sources */,
 				A65349BA270F2D37000D58B5 /* APIConstants.swift in Sources */,

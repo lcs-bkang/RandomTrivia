@@ -11,20 +11,27 @@ struct TriviaScreen: View {
     
     @StateObject var vm = TriviaViewModelImpl(service: TriviaServiceImpl())
     
+    @State var correctAnswer: String
+    
     var body: some View {
         
         VStack {
             TriviaView()
             
+            Rectangle()
+                .fill(Color.purple)
+                .frame(width: 450, height: 5, alignment: .center)
+
             Spacer()
             
-            ButtonView()
+            ButtonView(correctAnswer: correctAnswer)
             Spacer()
             
             
         }
         .task {
             await vm.getTrivia()
+            correctAnswer = Trivia.dummyData.results[0].correct_answer
         }
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
@@ -48,6 +55,6 @@ struct TriviaScreen: View {
 
 struct TriviaScreen_Previews: PreviewProvider {
     static var previews: some View {
-        TriviaScreen()
+        TriviaScreen(correctAnswer: Trivia.dummyData.results[0].correct_answer)
     }
 }

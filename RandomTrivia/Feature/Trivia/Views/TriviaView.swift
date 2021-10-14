@@ -14,16 +14,10 @@ struct TriviaView: View {
         VStack {
             Text(Trivia.dummyData.results[0].category)
                 .font(.title3)
-                .padding(3)
+                .padding(2)
                 .overlay(
                     Rectangle()
-                        .stroke(Color.blue, lineWidth: 4))
-            Text(Trivia.dummyData.results[0].question)
-                .font(.largeTitle)
-                .padding(5)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 16)
-                        .stroke(Color.blue, lineWidth: 6))
+                        .stroke(Color.purple, lineWidth: 4))
             HStack {
                 
                 Spacer()
@@ -45,7 +39,17 @@ struct TriviaView: View {
                 }
                 Spacer()
             }
-            .font(.headline)
+            .padding(2)
+            .overlay(
+            Rectangle()
+                .stroke(Color.purple, lineWidth: 4))
+            Text(Trivia.dummyData.results[0].question)
+                .font(.largeTitle)
+                .padding(6)
+                .overlay(
+                    RoundedRectangle(cornerRadius: 16)
+                        .stroke(Color.purple, lineWidth: 6))
+
         }
     }
 }
