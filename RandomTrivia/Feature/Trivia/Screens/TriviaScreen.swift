@@ -46,7 +46,7 @@ struct TriviaScreen: View {
 // NEXT STEPS:
 // - Buttons when one is clicked, correct answer is shown and popup is given depending on if clicked answer is correct or not
 // - Change button amount and view when different amount of incorrect answers are given
-// - Randomise which button gives which answer
+// - Randomise which button gives which answer (Done?)
 // - Fix and optimize the UI
 // - Replayability.  I.e. when question is done, give another
 
