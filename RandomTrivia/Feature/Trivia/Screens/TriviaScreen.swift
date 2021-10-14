@@ -22,7 +22,7 @@ struct TriviaScreen: View {
 
             Spacer()
             
-            ButtonView()
+            MultipleChoiceButtonView()
             Spacer()
             
             
