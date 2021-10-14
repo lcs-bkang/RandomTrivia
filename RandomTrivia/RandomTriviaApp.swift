@@ -13,7 +13,7 @@ struct RandomTriviaApp: App {
         WindowGroup {
             
             NavigationView {
-                TriviaScreen(correctAnswer: Trivia.dummyData.results[0].correct_answer)
+                TriviaScreen()
             }
         }
     }
