@@ -13,9 +13,8 @@ struct MultipleChoiceButtonView: View {
     
     @State var possibleAnswers: [String] = []
     
-    @State var guessedIndex: Int? = nil
-    
     var body: some View {
+        
         VStack {
             Spacer()
             ForEach(possibleAnswers.indices) { index in
@@ -27,11 +26,23 @@ struct MultipleChoiceButtonView: View {
             possibleAnswers.insert(Trivia.dummyData.results[0].correct_answer, at: Int.random(in: 0...3))
         }
     }
+    
+//    func colorForButton(at buttonIndex: Int) -> Color {
+//        guard let guessedIndex = guessedIndex, guessedIndex == buttonIndex else {
+//            return .clear
+//        }
+//        if guessedIndex == correctIndex {
+//            return .green
+//        } else {
+//            return .red
+//        }
+//
+//    }
 }
 
 
 struct MultipleChoiceButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonView(possibleAnswers: ["Cristiano Ronaldo", "Lionel Messi", "Ariana Grande", "LeBron James"])
+        MultipleChoiceButtonView(possibleAnswers: ["Cristiano Ronaldo", "Lionel Messi", "Ariana Grande", "LeBron James"])
     }
 }

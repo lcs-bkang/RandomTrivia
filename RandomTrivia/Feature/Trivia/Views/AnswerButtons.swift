@@ -20,10 +20,6 @@ struct AnswerButtons: View {
                 .bold()
                 .padding(40)
                 .foregroundColor(.black)
-                .background(
-                    RoundedRectangle(cornerRadius: 20, style: .continuous)
-                        .fill(Color.purple)
-                        .frame(width: 380, height: 110, alignment: .center))
         })
     }
 }
