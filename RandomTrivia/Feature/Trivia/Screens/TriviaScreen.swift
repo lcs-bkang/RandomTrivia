@@ -11,33 +11,38 @@ struct TriviaScreen: View {
     
     @StateObject var vm = TriviaViewModelImpl(service: TriviaServiceImpl())
     
+    @State private var jsonLoaded = false
+    
     var body: some View {
         
-        VStack {
-            TriviaView()
-            
-            Rectangle()
-                .fill(Color.purple)
-                .frame(width: 450, height: 5, alignment: .center)
-
-            Spacer()
-            
-            MultipleChoiceButtonView()
-            Spacer()
-            
-            
-        }
-        .task {
-            await vm.getTrivia()
-        }
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .principal)
-            {
-                Text("Trivia")
-                    .font(.largeTitle.bold())
-                
-                    .accessibilityAddTraits(.isHeader)
+        Group {
+            if jsonLoaded == false {
+                LoadingView(text: "Fetching Trivia")
+            } else {
+                VStack {
+                    TriviaView()
+                    
+                    Spacer()
+                    
+                    MultipleChoiceButtonView()
+                    Spacer()
+                    
+                    
+                }
+                .task {
+                    await vm.getTrivia()
+                    jsonLoaded = true
+                }
+                .navigationBarTitleDisplayMode(.inline)
+                .toolbar {
+                    ToolbarItem(placement: .principal)
+                    {
+                        Text("Trivia")
+                            .font(.largeTitle.bold())
+                        
+                            .accessibilityAddTraits(.isHeader)
+                    }
+                }
             }
         }
     }
