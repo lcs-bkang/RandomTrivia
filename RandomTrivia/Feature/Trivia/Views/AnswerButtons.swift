@@ -11,12 +11,10 @@ struct AnswerButtons: View {
     
     var text: String
     
-    @State var clicked: Bool = false
-    
     var body: some View {
         
         Button(action: {
-            clicked = true
+
         }, label: { Text(text)
                 .font(.title2)
                 .bold()

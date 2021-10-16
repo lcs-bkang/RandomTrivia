@@ -11,19 +11,21 @@ struct MultipleChoiceButtonView: View {
     
     @ObservedObject var vm = TriviaViewModelImpl(service: TriviaServiceImpl())
     
-    @State var possibleAnswers: [String] = []
-    
+    @State private var hasTimeElapsed = false
     var body: some View {
         
         VStack {
             Spacer()
-            ForEach(possibleAnswers.indices) { index in
-                AnswerButtons(text: possibleAnswers[index])
+            ForEach(hasTimeElapsed ? Trivia.dummyData.results[0].incorrect_answers.indices : vm.possibleAnswers.indices) { index in
+                AnswerButtons(text: vm.possibleAnswers[index])
             }
         }
-        .task {
-            possibleAnswers = Trivia.dummyData.results[0].incorrect_answers
-            possibleAnswers.insert(Trivia.dummyData.results[0].correct_answer, at: Int.random(in: 0...3))
+        .onAppear(perform: delayText)
+        }
+    private func delayText() {
+        // Delay of 7.5 seconds
+        DispatchQueue.main.asyncAfter(deadline: .now() + 7.5) {
+            hasTimeElapsed = true
         }
     }
     
@@ -43,6 +45,6 @@ struct MultipleChoiceButtonView: View {
 
 struct MultipleChoiceButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        MultipleChoiceButtonView(possibleAnswers: ["Cristiano Ronaldo", "Lionel Messi", "Ariana Grande", "LeBron James"])
+        MultipleChoiceButtonView()
     }
 }

@@ -10,9 +10,12 @@ import SwiftUI
 struct TriviaView: View {
     
     @ObservedObject var vm = TriviaViewModelImpl(service: TriviaServiceImpl())
+    
+    @State var hasTimeElapsed = false
+    
     var body: some View {
         VStack {
-            Text(Trivia.dummyData.results[0].category)
+            Text(vm.results.results[0].category)
                 .font(.title3)
                 .padding(2)
                 .overlay(
@@ -24,7 +27,7 @@ struct TriviaView: View {
                 VStack {
                     Text("Difficulty:")
                         .font(.title3)
-                    Text(Trivia.dummyData.results[0].difficulty)
+                    Text(vm.results.results[0].difficulty)
                         .font(.title2)
                         .bold()
                 }
@@ -33,7 +36,7 @@ struct TriviaView: View {
                 VStack {
                     Text("Type:")
                         .font(.title3)
-                    Text (Trivia.dummyData.results[0].type)
+                    Text(vm.results.results[0].type)
                         .font(.title2)
                         .bold()
                 }
@@ -43,13 +46,16 @@ struct TriviaView: View {
             .overlay(
             Rectangle()
                 .stroke(Color.purple, lineWidth: 4))
-            Text(Trivia.dummyData.results[0].question)
+            Text(vm.results.results[0].question)
                 .font(.largeTitle)
                 .padding(6)
                 .overlay(
                     RoundedRectangle(cornerRadius: 16)
                         .stroke(Color.purple, lineWidth: 6))
 
+        }
+        .task {
+            await vm.getTrivia()
         }
     }
 }
