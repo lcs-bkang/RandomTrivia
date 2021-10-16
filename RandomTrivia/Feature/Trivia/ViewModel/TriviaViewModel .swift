@@ -18,6 +18,8 @@ final class TriviaViewModelImpl: TriviaViewModel {
     
     @Published private(set) var possibleAnswers: [String] = []
     
+    @Published private(set) var done = false
+    
     private let service: TriviaService
     
     init(service: TriviaService) {
@@ -27,8 +29,9 @@ final class TriviaViewModelImpl: TriviaViewModel {
     func getTrivia() async {
         do {
             self.results = try await service.fetchTrivia()
-            possibleAnswers = results.results[0].incorrect_answers
+            self.possibleAnswers = results.results[0].incorrect_answers
             possibleAnswers.insert(results.results[0].correct_answer, at: Int.random(in: 0...3))
+            self.done = true
             dump(results)
             dump(possibleAnswers)
         } catch {

@@ -14,29 +14,20 @@ struct TriviaScreen: View {
     var body: some View {
         
         VStack {
-            TriviaView()
+            TriviaView(category: vm.results.results[0].category, difficulty: vm.results.results[0].difficulty, type: vm.results.results[0].type, question: vm.results.results[0].question)
             
             Spacer()
             
-            MultipleChoiceButtonView()
+            if vm.done == false {
+                Text("Waiting...")
+            } else {
+                MultipleChoiceButtonView(Button1: vm.results.results[0].incorrect_answers[0], Button2: vm.results.results[0].incorrect_answers[1], Button3: vm.results.results[0].correct_answer, Button4: vm.results.results[0].incorrect_answers[2])
             Spacer()
-            
+            }
             
         }
-//        .task {
-//            await vm.getTrivia()
-//        }
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            ToolbarItem(placement: .principal)
-            {
-                Text("Trivia")
-                    .font(.largeTitle.bold())
-                
-                    .accessibilityAddTraits(.isHeader)
-                
-                
-            }
+        .task {
+            await vm.getTrivia()
         }
     }
 }

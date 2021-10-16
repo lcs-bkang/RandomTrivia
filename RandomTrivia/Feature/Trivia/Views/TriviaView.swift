@@ -11,11 +11,17 @@ struct TriviaView: View {
     
     @ObservedObject var vm = TriviaViewModelImpl(service: TriviaServiceImpl())
     
-    @State var hasTimeElapsed = false
+    var category: String
+    
+    var difficulty: String
+    
+    var type: String
+    
+    var question: String
     
     var body: some View {
         VStack {
-            Text(vm.results.results[0].category)
+            Text(category)
                 .font(.title3)
                 .padding(2)
                 .overlay(
@@ -27,7 +33,7 @@ struct TriviaView: View {
                 VStack {
                     Text("Difficulty:")
                         .font(.title3)
-                    Text(vm.results.results[0].difficulty)
+                    Text(difficulty)
                         .font(.title2)
                         .bold()
                 }
@@ -36,7 +42,7 @@ struct TriviaView: View {
                 VStack {
                     Text("Type:")
                         .font(.title3)
-                    Text(vm.results.results[0].type)
+                    Text(type)
                         .font(.title2)
                         .bold()
                 }
@@ -46,7 +52,7 @@ struct TriviaView: View {
             .overlay(
             Rectangle()
                 .stroke(Color.purple, lineWidth: 4))
-            Text(vm.results.results[0].question)
+            Text(question)
                 .font(.largeTitle)
                 .padding(6)
                 .overlay(
@@ -54,14 +60,11 @@ struct TriviaView: View {
                         .stroke(Color.purple, lineWidth: 6))
 
         }
-        .task {
-            await vm.getTrivia()
-        }
     }
 }
 
 struct TriviaView_Previews: PreviewProvider {
     static var previews: some View {
-        TriviaView()
+        TriviaView(category: Trivia.dummyData.results[0].correct_answer, difficulty: Trivia.dummyData.results[0].correct_answer, type: Trivia.dummyData.results[0].correct_answer, question: Trivia.dummyData.results[0].correct_answer)
     }
 }
